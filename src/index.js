@@ -1,10 +1,10 @@
-module.exports = function toReadable (number) {
-    if ((number.toString()).length == 3) {  //897
-        hundreds = Math.floor(number / 100); //8
-        number = number % 100; //97
-        tens = Math.floor(x / 10); //9
-        ones = number % 10; //7
-    }
+module.exports = function toReadable(number) {
+    //897
+    let hundreds = Math.floor(number / 100); //8
+    number = number % 100; //97
+
+    let tens = Math.floor(number / 10); //9
+    let ones = number % 10; //7
 
     return 0;
 }
