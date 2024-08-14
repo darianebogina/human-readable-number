@@ -1,5 +1,5 @@
 module.exports = function toReadable(number) {
-    let arr_ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+    let arr_ones = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
     let arr_tens = ['', 'ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
     let arr_special_tens = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
 
@@ -31,7 +31,9 @@ module.exports = function toReadable(number) {
         answer.push(arr_ones[ones]);
     }
 
-    
+    else if ((hundreds == 0) && (tens == 0) && (ones == 0)){
+        answer.push(arr_ones[ones]);
+    }
 
     return answer.join(' ');
 }
